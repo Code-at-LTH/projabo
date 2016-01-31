@@ -1,0 +1,2 @@
+# Starts an HTTP server. Port is 8000 by default, unless specified in [PORT].
+python -m http.server [PORT]

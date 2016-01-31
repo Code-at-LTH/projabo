@@ -1,12 +1,19 @@
-var w = window.screen.width
-var h = window.screen.height
-this.game = new Phaser.Game(w, h, Phaser.AUTO, 'content', { preload: this.preload, update: this.update });
+window.onload = function() {
+	var w = window.screen.width;
+	var h = window.screen.height;
+	var game = new Phaser.Game(w, h, Phaser.AUTO, '',
+		{ preload: preload, create: create, update: update });
 
-function preload() {
-    this.game.load.image('smile', '../sprites/sqsmile.png')
-    this.game.add.sprite(0, 0, 'smile')
-}
+	function preload() {
+	    game.load.image('smile', '../sprites/sqsmile.png');
+	}
 
-function update() {
+	function create() {
+		game.stage.backgroundColor == "#000";
+	    var smile = game.add.sprite(0, 0, 'smile');
+	}
 
-}
+	function update() {
+
+	}
+};
