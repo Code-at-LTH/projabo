@@ -1,8 +1,8 @@
 ///<reference path='./phaser.d.ts'/>""
 var SimpleGame = (function () {
     function SimpleGame() {
-        var w = window.screen.width;
-        var h = window.screen.height;
+        var w = window.screen.width / 2;
+        var h = window.screen.height / 2;
         this.game = new Phaser.Game(w, h, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, update: this.update });
     }
     SimpleGame.prototype.preload = function () {
