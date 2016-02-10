@@ -7,8 +7,10 @@ class SimpleGame {
     game: Phaser.Game;
     input: Phaser.Input;
     pointer: Phaser.Pointer;
-    logo: Phaser.Sprite;
-
+    iconGroup = Phaser.Group;
+    
+    // the constructor is for ts stuff so we should probably
+    // keep it minimal and put most stuff in create()
     constructor() {
         var w = window.screen.width/2;
         var h = window.screen.height/2;
@@ -17,20 +19,24 @@ class SimpleGame {
     }
     
     preload() {
-        this.game.load.image('logo', 'sprites/test.jpeg');
+        this.game.load.image('logo', 'sprites/sqsmile.png');
     }
 
     create() {
-        this.logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'logo');
-        this.logo.anchor.setTo(0.5, 0.5);
+	this.iconGroup = new Phaser.Group(this.game);
+    	for(let i=0; i<4;i++){
+		let logo: Phaser.Sprite;
+		this.logo = this.game.add.sprite(this.logo.width * i, this.logo.heigth * i, 'logo');
+		this.logo.anchor.setTo(0.5, 0.5);
+		this.iconGroup.add(logo);
+	}
     }
 
     update() {
         // updates the active input method (sounds like it can change over time)
         this.pointer = this.input.activePointer;
-	this.logo.x = this.pointer.x;
-	this.logo.y = this.pointer.y;
-	console.log("x: " + this.logo.x + " y: " + this.logo.y);
+	this.iconGroup.x = this.pointer.x;
+	this.iconGroup.y = this.pointer.y;
     }
 }
 
