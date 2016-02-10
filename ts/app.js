@@ -3,7 +3,6 @@ var SimpleGame = (function () {
     // the constructor is for ts stuff so we should probably
     // keep it minimal and put most stuff in create()
     function SimpleGame() {
-        this.iconGroup = Phaser.Group;
         var w = window.screen.width / 2;
         var h = window.screen.height / 2;
         this.game = new Phaser.Game(w, h, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, update: this.update });
@@ -13,11 +12,12 @@ var SimpleGame = (function () {
         this.game.load.image('logo', 'sprites/sqsmile.png');
     };
     SimpleGame.prototype.create = function () {
-        this.iconGroup = new Group(this.game);
+        this.iconGroup = new Phaser.Group(this.game);
         for (var i = 0; i < 4; i++) {
             var logo = void 0;
-            this.logo = this.game.add.sprite(this.logo.width * i, this.logo.heigth * i, 'logo');
-            this.logo.anchor.setTo(0.5, 0.5);
+            // can't have this. before logo here
+            logo = this.game.add.sprite(logo.width * i, logo.height * i, 'logo');
+            logo.anchor.setTo(0.5, 0.5);
             this.iconGroup.add(logo);
         }
     };
