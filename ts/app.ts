@@ -24,13 +24,13 @@ class SimpleGame {
 
     create() {
 	this.iconGroup = new Phaser.Group(this.game);
-	//these fucking error messages and vague documentation
-	let image = this.game.cache.getImage('logo', true);
+	//have to have .data at the end here
+	let image = this.game.cache.getImage('logo', true).data;
     	for(let i=0; i < 4; i++){
 		let logo: Phaser.Sprite;
 		console.log("Sprite: " + i);
 		// can't have "this." before logo here
-		logo = this.game.add.sprite(image.width * i, image.height * i, 'logo');
+		logo = this.game.add.sprite(image.width * i, 0, 'logo');
 		logo.anchor.setTo(0.5, 0.5);
 		this.iconGroup.add(logo);
 	}
