@@ -13,10 +13,12 @@ var SimpleGame = (function () {
     };
     SimpleGame.prototype.create = function () {
         this.iconGroup = new Phaser.Group(this.game);
+        var image = this.game.cache.getImage('logo', false);
         for (var i = 0; i < 4; i++) {
             var logo = void 0;
-            // can't have this. before logo here
-            logo = this.game.add.sprite(logo.width * i, logo.height * i, 'logo');
+            console.log("Sprite: " + i);
+            // can't have "this." before logo here
+            logo = this.game.add.sprite(image.width * i, image.height * i, 'logo');
             logo.anchor.setTo(0.5, 0.5);
             this.iconGroup.add(logo);
         }
