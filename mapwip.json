@@ -1,0 +1,43 @@
+{ "height":10,
+ "layers":[
+        {
+         "data":[303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 361, 303, 303, 214, 216, 219, 213, 303, 303, 303, 361, 303, 303, 214, 274, 277, 213, 303, 303, 303, 361, 303, 246, 244, 246, 246, 213, 303, 303, 303, 303, 241, 213, 213, 213, 213, 247, 213, 303, 361, 303, 241, 241, 213, 213, 247, 247, 303, 361, 361, 303, 303, 241, 247, 247, 247, 247, 241, 241, 303, 303, 303, 241, 241, 241, 241, 361, 361, 361, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303, 303],
+         "height":10,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":10,
+         "x":0,
+         "y":0
+        }],
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "properties":
+    {
+
+    },
+ "renderorder":"right-down",
+ "tileheight":16,
+ "tilesets":[
+        {
+         "columns":29,
+         "firstgid":1,
+         "image":"..\/..\/..\/..\/mnt\/hdd\/home\/me\/img\/roguelike-cave-pack\/Spritesheet\/roguelikeDungeon_transparent.png",
+         "imageheight":305,
+         "imagewidth":492,
+         "margin":0,
+         "name":"kennl-roguelike-cave-transparent",
+         "properties":
+            {
+
+            },
+         "spacing":1,
+         "tilecount":522,
+         "tileheight":16,
+         "tilewidth":16
+        }],
+ "tilewidth":16,
+ "version":1,
+ "width":10
+}
